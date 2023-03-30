@@ -31,9 +31,13 @@ local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
 tween:Play()
  
 wait(3)
-textLabel.Text = "You Are Using a old version of our script (V3)"
-wait(4)
-textLabel.Text = "So lets Change it to Version 4 "
+textLabel.Text = "ERROR Trying to find Script"
+wait(3)
+textLabel.Text = "Looks like You Are Using a old version of our script (V3)"
+wait(5)
+textLabel.Text = "Looking lastest Version"
+wait(3)
+textLabel.Text = "lastest Version Found!"
 wait(4)
 textLabel.Text = "AdvanceTech | Arsenal | V4 | is Now Being Loaded"
 
