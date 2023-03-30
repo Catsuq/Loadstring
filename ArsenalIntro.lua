@@ -14,7 +14,7 @@ textLabel.BackgroundTransparency = 0.5
 textLabel.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
 textLabel.Font = Enum.Font.GothamSemibold
 textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading HarshTechV7.4"
+textLabel.Text = "Loading AdvanceTech | Arsenal | V3"
 textLabel.TextSize = 18
 textLabel.Parent = screenGui
 local loadingRing = Instance.new("ImageLabel")
@@ -30,14 +30,14 @@ local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection
 local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
 tween:Play()
  
-wait(0.5)
+wait(3)
 textLabel.Text = "You Are Using a old version of our script (V3)"
-wait(2)
+wait(4)
 textLabel.Text = "So lets Change it to Version 4 "
-wait(2)
+wait(4)
 textLabel.Text = "AdvanceTech | Arsenal | V4 | is Now Being Loaded"
 
-wait(3) 
+wait(4) 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
