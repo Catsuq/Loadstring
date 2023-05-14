@@ -1,5 +1,7 @@
--- Fixed Some error thats all.
--- Rewrite :) Now it fully works.
+-- Resolved some errors and fully rewrote the code to ensure it works as intended.
+-- Set Discord_Invite to your desired invite code and run the script. It creates the 'Enhanced Software' folder in the 'Discord Invites' folder if it does not exist, and creates 'Enhanced Software.gg' file within it if it is not present.
+-- Utilizes Synapse's 'syn.request' function if it is available, or 'http.request' if not.
+
 local request = (syn and syn.request) or (http and http.request) or http_request
 local HttpService = game:GetService("HttpService")
 
