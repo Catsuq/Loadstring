@@ -31,7 +31,8 @@ local function loadScripts()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/Loadstring/main/femf2.lua"))()
     else
         -- Show notification for unsupported game and suggest supported games
-        showNotification("Wrong Game", "You have joined a different game. This script is available for use in Zombie Attack, Arsenal, Prison Life, RB Battles Season 3, and Michael Zombies.", 10)
+        showNotification("Wrong Game", "You have joined a different game. This script is available for use in:", 10)
+        showNotification("Game Support 1", "Zombie Attack, Arsenal, Prison Life, RB Battles Season 3, and Michael Zombies.", 10)
     end
 end
 
