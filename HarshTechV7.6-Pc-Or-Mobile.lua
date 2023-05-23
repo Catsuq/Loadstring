@@ -14,6 +14,9 @@ AFText.Text = "HarshTechV7.6 Made By AdvanceFalling Team (AF Team)"
 AFText.TextColor3 = Color3.fromRGB(0, 0, 0)
 AFText.TextSize = 25.000
 
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = AFText
+
 local function script()
 	local script = Instance.new('Script', AFText)
 
