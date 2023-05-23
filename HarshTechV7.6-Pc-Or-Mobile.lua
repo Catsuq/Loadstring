@@ -1,22 +1,28 @@
 local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
 local AFText = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.276162713, 0, 0, 0)
+Frame.Size = UDim2.new(0, 777, 0, 30)
+
 AFText.Name = "AFText"
-AFText.Parent = ScreenGui
-AFText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AFText.Parent = Frame
 AFText.BackgroundTransparency = 1.000
-AFText.Position = UDim2.new(0.276162716, 0, 0, 0)
-AFText.Size = UDim2.new(0, 777, 0, 30)
+AFText.Position = UDim2.new(0, 0, 0, 0)
+AFText.Size = UDim2.new(1, 0, 1, 0)
 AFText.Font = Enum.Font.FredokaOne
 AFText.Text = "HarshTechV7.6 Made By AdvanceFalling Team (AF Team)"
 AFText.TextColor3 = Color3.fromRGB(0, 0, 0)
 AFText.TextSize = 25.000
 
 UICorner.CornerRadius = UDim.new(0, 10)
-UICorner.Parent = AFText
+UICorner.Parent = Frame
 
 local function script()
 	local script = Instance.new('Script', AFText)
