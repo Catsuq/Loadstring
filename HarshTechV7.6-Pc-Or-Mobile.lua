@@ -1,28 +1,22 @@
 local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
 local AFText = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-Frame.Name = "Frame"
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.276162713, 0, 0, 0)
-Frame.Size = UDim2.new(0, 777, 0, 30)
-
 AFText.Name = "AFText"
-AFText.Parent = Frame
+AFText.Parent = ScreenGui
+AFText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AFText.BackgroundTransparency = 1.000
-AFText.Position = UDim2.new(0, 0, 0, 0)
-AFText.Size = UDim2.new(1, 0, 1, 0)
+AFText.Position = UDim2.new(0.276162716, 0, 0, 0)
+AFText.Size = UDim2.new(0, 777, 0, 30)
 AFText.Font = Enum.Font.FredokaOne
 AFText.Text = "HarshTechV7.6 Made By AdvanceFalling Team (AF Team)"
 AFText.TextColor3 = Color3.fromRGB(0, 0, 0)
 AFText.TextSize = 25.000
 
 UICorner.CornerRadius = UDim.new(0, 10)
-UICorner.Parent = Frame
+UICorner.Parent = AFText
 
 local function script()
 	local script = Instance.new('Script', AFText)
@@ -52,6 +46,7 @@ coroutine.wrap(script)()
 
 local Chose = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
+local UICornerFrame = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local Original = Instance.new("TextButton")
 local PC = Instance.new("TextButton")
@@ -71,73 +66,66 @@ Frame.Size = UDim2.new(0, 300, 0, 300)
 Frame.ClipsDescendants = true
 Frame.Active = true
 
+UICornerFrame.CornerRadius = UDim.new(0, 10)
+UICornerFrame.Parent = Frame
+
 TextLabel.Name = "TextLabel"
 TextLabel.Parent = Frame
 TextLabel.AnchorPoint = Vector2.new(0.5, 0)
 TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Position = UDim2.new(0.5, 0, 0, 0)
-TextLabel.Size = UDim2.new(1, 0, 0.15, 0)
-TextLabel.Font = Enum.Font.GothamBold
-TextLabel.Text = "Choose a Version"
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, 0, 0, 20)
+TextLabel.Size = UDim2.new(0, 250, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Choose an option"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 30
-TextLabel.TextWrapped = true
+TextLabel.TextSize = 24.000
 
 Original.Name = "Original"
 Original.Parent = Frame
 Original.AnchorPoint = Vector2.new(0.5, 0)
-Original.BackgroundColor3 = Color3.fromRGB(16, 88, 233)
-Original.Position = UDim2.new(0.5, 0, 0.25, 0)
-Original.Size = UDim2.new(0.7, 0, 0.1, 0)
-Original.Font = Enum.Font.GothamSemibold
-Original.Text = "Original Version"
+Original.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Original.BorderSizePixel = 0
+Original.Position = UDim2.new(0.5, 0, 0, 100)
+Original.Size = UDim2.new(0, 200, 0, 50)
+Original.Font = Enum.Font.SourceSans
+Original.Text = "Original"
 Original.TextColor3 = Color3.fromRGB(255, 255, 255)
-Original.TextScaled = true
-Original.TextSize = 24
-Original.TextWrapped = true
+Original.TextSize = 24.000
 
 PC.Name = "PC"
 PC.Parent = Frame
 PC.AnchorPoint = Vector2.new(0.5, 0)
-PC.BackgroundColor3 = Color3.fromRGB(16, 88, 233)
-PC.Position = UDim2.new(0.5, 0, 0.4, 0)
-PC.Size = UDim2.new(0.7, 0, 0.1, 0)
-PC.Font = Enum.Font.GothamSemibold
-PC.Text = "PC Version"
+PC.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+PC.BorderSizePixel = 0
+PC.Position = UDim2.new(0.5, 0, 0, 200)
+PC.Size = UDim2.new(0, 200, 0, 50)
+PC.Font = Enum.Font.SourceSans
+PC.Text = "PC"
 PC.TextColor3 = Color3.fromRGB(255, 255, 255)
-PC.TextScaled = true
-PC.TextSize = 24
-PC.TextWrapped = true
+PC.TextSize = 24.000
 
-TextLabel_2.Name = "TextLabel_2"
+TextLabel_2.Name = "TextLabel"
 TextLabel_2.Parent = Frame
-TextLabel_2.AnchorPoint = Vector2.new(0.5, 0)
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextLabel_2.BackgroundTransparency = 1
-TextLabel_2.Position = UDim2.new(0.5, 0, 0.6, 0)
-TextLabel_2.Size = UDim2.new(1, 0, 0.15, 0)
-TextLabel_2.Font = Enum.Font.Gotham
-TextLabel_2.Text = "Choose the version that suits your needs"
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0, 0, 0, 260)
+TextLabel_2.Size = UDim2.new(0, 300, 0, 40)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Made by HarshTechV7.6"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 18
-TextLabel_2.TextWrapped = true
+TextLabel_2.TextSize = 20.000
 
-TextLabel_3.Name = "TextLabel_3"
+TextLabel_3.Name = "TextLabel"
 TextLabel_3.Parent = Frame
-TextLabel_3.AnchorPoint = Vector2.new(0.5, 0)
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextLabel_3.BackgroundTransparency = 1
-TextLabel_3.Position = UDim2.new(0.5, 0, 0.8, 0)
-TextLabel_3.Size = UDim2.new(1, 0, 0.15, 0)
-TextLabel_3.Font = Enum.Font.GothamSemibold
-TextLabel_3.Text = "Made by: AdvanceFalling Team"
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0, 0, 0, 0)
+TextLabel_3.Size = UDim2.new(0, 300, 0, 20)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "AF Team"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 18
-TextLabel_3.TextWrapped = true
+TextLabel_3.TextSize = 14.000
 
 -- Animation
 local tweenService = game:GetService("TweenService")
