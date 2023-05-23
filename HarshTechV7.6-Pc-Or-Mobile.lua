@@ -1,5 +1,6 @@
 local ScreenGui = Instance.new("ScreenGui")
 local AFText = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
