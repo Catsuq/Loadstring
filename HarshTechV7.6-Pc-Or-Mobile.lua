@@ -112,7 +112,7 @@ TextLabel_2.BorderSizePixel = 0
 TextLabel_2.Position = UDim2.new(0, 0, 0, 260)
 TextLabel_2.Size = UDim2.new(0, 300, 0, 40)
 TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Made by HarshTechV7.6"
+TextLabel_2.Text = "Made by AdvanceFalling Team"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 20.000
 
@@ -123,7 +123,7 @@ TextLabel_3.BorderSizePixel = 0
 TextLabel_3.Position = UDim2.new(0, 0, 0, 0)
 TextLabel_3.Size = UDim2.new(0, 300, 0, 20)
 TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "AF Team"
+TextLabel_3.Text = "HarshTech Chooser"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 14.000
 
