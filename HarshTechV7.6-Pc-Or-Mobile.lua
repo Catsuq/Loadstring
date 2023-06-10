@@ -8,18 +8,18 @@ AFText.Name = "AFText"
 AFText.Parent = ScreenGui
 AFText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AFText.BackgroundTransparency = 1.000
-AFText.Position = UDim2.new(0.276162716, 0, 0.5, -15) -- Adjusted position for mobile
-AFText.Size = UDim2.new(0, 777, 0, 30)
+AFText.Size = UDim2.new(0.9, 0, 0, 30) -- Adjusted size for mobile
+AFText.Position = UDim2.new(0.05, 0, 0.5, -180) -- Adjusted position for mobile
 AFText.Font = Enum.Font.FredokaOne
-AFText.Text = "HarshTechV7.6 by AF Team"
+AFText.Text = "Made by: AdvaneFalling Team(AF Team)"
 AFText.TextColor3 = Color3.fromRGB(0, 0, 0)
-AFText.TextSize = 25.000
+AFText.TextSize = 15.000
 
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = AFText
 
 local function script()
-	local script = Instance.new('Script', AFText)
+	local script = Instance.new('LocalScript', AFText)
 
 	local r = {
 		Color3.fromRGB(254, 0, 0),
@@ -43,6 +43,7 @@ local function script()
 end
 
 coroutine.wrap(script)()
+
 
 -- Check if running on a mobile device
 local UserInputService = game:GetService("UserInputService")
