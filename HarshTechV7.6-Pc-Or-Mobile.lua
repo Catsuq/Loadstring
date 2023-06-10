@@ -8,10 +8,10 @@ AFText.Name = "AFText"
 AFText.Parent = ScreenGui
 AFText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AFText.BackgroundTransparency = 1.000
-AFText.Position = UDim2.new(0.276162716, 0, 0, 0)
+AFText.Position = UDim2.new(0.276162716, 0, 0.5, -15) -- Adjusted position for mobile
 AFText.Size = UDim2.new(0, 777, 0, 30)
 AFText.Font = Enum.Font.FredokaOne
-AFText.Text = "HarshTechV7.6 Made By AdvanceFalling Team (AF Team)"
+AFText.Text = "HarshTechV7.6 by AF Team"
 AFText.TextColor3 = Color3.fromRGB(0, 0, 0)
 AFText.TextSize = 25.000
 
@@ -43,6 +43,16 @@ local function script()
 end
 
 coroutine.wrap(script)()
+
+-- Check if running on a mobile device
+local UserInputService = game:GetService("UserInputService")
+local isMobile = UserInputService.TouchEnabled and not UserInputService.MouseEnabled
+
+if isMobile then
+    -- Adjust text position for mobile
+    AFText.Position = UDim2.new(0.276162716, 0, 0.85, -15)
+end
+
 
 local Chose = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
