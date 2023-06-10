@@ -209,7 +209,7 @@ end)
 Original.MouseButton1Click:Connect(function()
 	animateOut()
 	wait(0.5) -- Adjust the delay if needed
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/Loadstring/main/HarshTechV7.5%20Original.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/HarshTechV7.6/main/main.lua"))()
 end)
 
 PC.MouseButton1Click:Connect(function()
