@@ -51,7 +51,7 @@ local isMobile = UserInputService.TouchEnabled and not UserInputService.MouseEna
 
 if isMobile then
     -- Adjust text position for mobile
-    AFText.Position = UDim2.new(0.276162716, 0, 0.85, -15)
+    AFText.Position = UDim2.new(0.276162716, 0, 0.85, -300)
 end
 
 
