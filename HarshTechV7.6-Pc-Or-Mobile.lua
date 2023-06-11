@@ -8,12 +8,12 @@ AFText.Name = "AFText"
 AFText.Parent = ScreenGui
 AFText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AFText.BackgroundTransparency = 1.000
-AFText.Size = UDim2.new(0.9, 0, 0, 30) -- Adjusted size for mobile
-AFText.Position = UDim2.new(0.05, 0, 0.5, -180) -- Adjusted position for mobile
+AFText.Size = UDim2.new(0.9, 0, 0, 30) 
+AFText.Position = UDim2.new(0.05, 0, 0.5, -500) 
 AFText.Font = Enum.Font.FredokaOne
 AFText.Text = "Made by: AdvaneFalling Team(AF Team)"
 AFText.TextColor3 = Color3.fromRGB(0, 0, 0)
-AFText.TextSize = 15.000
+AFText.TextSize = 20.000
 
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = AFText
@@ -44,7 +44,7 @@ end
 
 coroutine.wrap(script)()
 
-
+-- Adjusted position for mobile
 -- Check if running on a mobile device
 local UserInputService = game:GetService("UserInputService")
 local isMobile = UserInputService.TouchEnabled and not UserInputService.MouseEnabled
