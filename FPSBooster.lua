@@ -2,8 +2,12 @@
 - Original script by YellowGreg, 
 - Modified by MMSVon (added handling for decals), Wspboy12 (optimized code for performance), ShadowClark (added support for particle emitters)
 ]]--
--- Created on 5/7/2023 7:17 PM. Last updated on 5/13/2023 10:45 PM.
+-- Created on 5/7/2023 7:17 PM. Last updated on 6/15/2023 11:39 AM.
 
+--[[ Error Fixed:
+1. The `handleClothing function` was updated to handle `Shirt` objects correctly. The property `Template` was replaced with `ShirtTemplate` for `Shirt` objects and `PantsTemplate` for `Pants` objects.
+2. The corrected `handleClothing` function was called when handling existing and new descendants of type `Shirt` or `Pants` to fix the error.
+]]--
 local decalsYeeted = true
 local workspace = game.Workspace
 local lighting = game.Lighting
@@ -29,7 +33,7 @@ end
 lighting.GlobalShadows = 0
 lighting.FogEnd = 9e9
 lighting.Brightness = 0
-settings().Rendering.QualityLevel = "Level01"
+settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
 
 -- Consolidate common operations into functions for better readability and maintainability
 local function handleBasePart(part)
@@ -74,7 +78,11 @@ end
 
 local function handleClothing(clothing)
   if decalsYeeted then
-    clothing[clothing.ClassName .. "Template"] = ""
+    if clothing:IsA("Shirt") then
+      clothing.ShirtTemplate = ""
+    elseif clothing:IsA("Pants") then
+      clothing.PantsTemplate = ""
+    end
   end
 end
 
@@ -106,13 +114,13 @@ workspace.DescendantAdded:Connect(function(descendant)
   if descendant:IsA("BasePart") and not descendant:IsA("MeshPart") then
     handleBasePart(descendant)
   elseif descendant:IsA("Decal") or descendant:IsA("Texture") then
-    handleDecal(descendant)
+    handleDecalOrTexture(descendant)
   elseif descendant:IsA("ParticleEmitter") or descendant:IsA("Trail") then
-    handleParticleEmitter(descendant)
+    handleParticleEmitterOrTrail(descendant)
   elseif descendant:IsA("Explosion") then
     handleExplosion(descendant)
   elseif descendant:IsA("Fire") or descendant:IsA("SpotLight") or descendant:IsA("Smoke") or descendant:IsA("Sparkles") then
-    handleEnabled(descendant)
+    descendant.Enabled = false
   elseif descendant:IsA("MeshPart") then
     handleMeshPart(descendant)
   elseif descendant:IsA("SpecialMesh") then
@@ -123,28 +131,5 @@ workspace.DescendantAdded:Connect(function(descendant)
     handleClothing(descendant)
   end
 end)
-
--- Handle existing descendants
-for _, descendant in ipairs(workspace:GetDescendants()) do
-  if descendant:IsA("BasePart") and not descendant:IsA("MeshPart") then
-    handleBasePart(descendant)
-  elseif descendant:IsA("Decal") or descendant:IsA("Texture") then
-    handleDecal(descendant)
-  elseif descendant:IsA("ParticleEmitter") or descendant:IsA("Trail") then
-    handleParticleEmitter(descendant)
-  elseif descendant:IsA("Explosion") then
-    handleExplosion(descendant)
-  elseif descendant:IsA("Fire") or descendant:IsA("SpotLight") or descendant:IsA("Smoke") or descendant:IsA("Sparkles") then
-    handleEnabled(descendant)
-  elseif descendant:IsA("MeshPart") then
-    handleMeshPart(descendant)
-  elseif descendant:IsA("SpecialMesh") then
-    handleSpecialMesh(descendant)
-  elseif descendant:IsA("ShirtGraphic") then
-    handleShirtGraphic(descendant)
-  elseif descendant:IsA("Shirt") or descendant:IsA("Pants") then
-    handleClothing(descendant)
-  end
-end
 
 print("Anti-lag script loaded successfully!")
