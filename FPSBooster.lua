@@ -2,7 +2,7 @@
 - Original script by YellowGreg, 
 - Modified by MMSVon (added handling for decals), Wspboy12 (optimized code for performance), ShadowClark (added support for particle emitters)
 ]]--
--- Created on 5/7/2023 7:17 PM. Last updated on 6/15/2023 11:39 AM.
+-- Created on 5/7/2023 7:17 PM. Last updated on 6/15/2023 11:42 AM.
 
 --[[ Error Fixed:
 1. The `handleClothing function` was updated to handle `Shirt` objects correctly. The property `Template` was replaced with `ShirtTemplate` for `Shirt` objects and `PantsTemplate` for `Pants` objects.
