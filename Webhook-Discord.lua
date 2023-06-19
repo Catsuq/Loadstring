@@ -51,7 +51,7 @@ coroutine.resume(coroutine.create(function()
             if player.Character.UpperTorso:FindFirstChild('OriginalSize') then
                 player.Character.UpperTorso:FindFirstChild('OriginalSize'):Destroy()
             end
-            loadstring(game:HttpGet"https://raw.githubusercontent.com/Catsuq/Fun-hub/fun4ng4mez/Script.lua")()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/PickleIsDaBest/EmojiMain/main/Script'))()
         end
         local success, err = pcall(main)
     end
