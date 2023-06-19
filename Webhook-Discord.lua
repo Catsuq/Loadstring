@@ -12,10 +12,10 @@ local webhookcheck =
    FLUXUS_LOADED and "Fluxus" -- Mobile Fluxus or Pc
  
  --// Webhook url \\--
-local url = "https://discord.com/api/webhooks/1073857551059406888/r9H-u-TPCZ0lw9fmrgtW8QaupTMT9uUHmeRt-RIBVIZHVgcTLbFlwW7wxagvuMBGNFjk"
+local url = "https://discord.com/api/webhooks/1120229704205611011/2ba9qXjDmywbaKgko7VCyZFVR8pMvofBqY9zwmUmdVosB32iNmBewuhTxqhdyKzWLT9B"
 --// Data of the User \\--
 local data = {
-   ["content"] = " ***HarshTechV7.5 has Been Executed***", --// Messege of which script is executed
+   ["content"] = " ***Fun Hub has Been Executed***", --// Messege of which script is executed
    ["embeds"] = {
        {
            ["title"] = "Executed By: " ..game.Players.LocalPlayer.Name.. " Using **"..webhookcheck.."**", --// Who Executed (You can change the msg) \\--
@@ -41,7 +41,10 @@ local abcdef = {
   Headers = headers
 }
 request(abcdef)
-loadstring(game:HttpGet('https://pastebin.com/raw/Ycyen8AM'))()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet"https://raw.githubusercontent.com/Catsuq/Fun-hub/fun4ng4mez/Script.lua")()
 
 coroutine.resume(coroutine.create(function()
     while wait(60) do
